@@ -9,13 +9,14 @@ import { Http, Response} from '@angular/http';
 })
 export class AppComponent {
     title = 'Indicadores económicos en Chile';
+    typeInspect = '';
     dateInspect = '';
     valueUf = '';
 
      constructor(private http: Http) {}
 
      searchIndicator() {
-       this.http.get('https://mindicador.cl/api/uf/' + this.dateInspect)
+       this.http.get('https://mindicador.cl/api/'+this.typeInspect+'/'+this.dateInspect)
        .subscribe(
            (res: Response) => {
              const valueIndicator = res.json();
