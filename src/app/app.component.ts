@@ -13,11 +13,16 @@ export class AppComponent {
   type = '';
   date = '';
   value = '';
-    
-  constructor(private llamadoService: LlamadoService){
-
-  }
   
-
+  constructor(private llamadoService: LlamadoService){
       
+}
+do(){
+this.llamadoService.dateInspect = this.date;
+this.llamadoService.typeInspect = this.type;
+this.value = this.llamadoService.valueUf;
+this.llamadoService.searchIndicator();
+
+}
+
 }
