@@ -12,7 +12,7 @@ export class LlamadoService {
 
      constructor(private http: Http) {}
 
-     searchIndicator() {
+   searchIndicator() {
        this.http.get('https://mindicador.cl/api/'+this.typeInspect+'/'+this.dateInspect)
        .subscribe(
            (res: Response) => {
