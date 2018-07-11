@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Http, Response} from '@angular/http';
 import { LlamadoService } from './llamado.service';
 
 
@@ -9,30 +8,20 @@ import { LlamadoService } from './llamado.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  id_select = '';
-  id = '';
-  price = '';
-  description = '';
-  id2 = '';
-  price2 = '';
-  description2 = '';
-
+  title = 'Indicadores económicos en Chile';
+  type = '';
+  date = '';
+  value = '';
+  
   constructor(private llamadoService: LlamadoService){
-    
-  }
-  
-  uno() {
-    this.id = this.llamadoService.id;
-    this.price = this.llamadoService.price;
-    this.description = this.llamadoService.description;
-    this.llamadoService.llamarUno();  
-  }
-  todo() {
-    this.llamadoService.id_select = this.id_select;
-    this.id2 = this.llamadoService.id2;
-    this.price2 = this.llamadoService.price2;
-    this.description2 = this.llamadoService.description2;
-    this.llamadoService.llamarTodo();  
-  }
-  
+      
+}
+do(){
+this.llamadoService.dateInspect = this.date;
+this.llamadoService.typeInspect = this.type;
+this.value = this.llamadoService.valueUf;
+this.llamadoService.searchIndicator();
+
+}
+
 }
