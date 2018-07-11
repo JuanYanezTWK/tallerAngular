@@ -1,4 +1,14 @@
 <!--The content below is only a placeholder and can be replaced.-->
+<<<<<<< HEAD
+<div style="text-align:center">
+  <h1>
+    Bienvenido a {{ title }}
+  </h1>
+</div>
+<h2>Ingrese si es UF o UTM y la fecha:</h2>
+<br>
+=======
+>>>>>>> 604357ad64cb30d69267d71e6cc4f67a058b259b
 <div>
   <label> 
     <input [(ngModel)]="id_select" placeholder="Ingrese ID Producto"><button (click)="uno()">Buscar</button>
